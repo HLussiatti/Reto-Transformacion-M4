@@ -7,3 +7,25 @@ Crea un repositorio propio, mostrando el paso a paso y tu criterio para la trans
 # Extra
 
 Las colecciones de datos que forman tu json, subirlas a la base de datos creada en el reto anterior. 
+
+
+# PASOS PARA GENERAR json:
+1. Instalé la extensión "Parquet Viewer" en VS.
+2. Instalé la bibioteca "pyarrow" (pandas ya estaba instalada).
+3. Levanto el archivo parquet con pandas en un DF. 
+4. Estructuro el DF en varios DF y los convierto a diccionarios.
+5. Armo un json con la estructura de los diccionarios.
+6. Escribo el json.
+
+# PASOS PARA LEVANTAR MONGODB:
+1. Modifiqué el yml de mongo con la versión "latest" y la url adecuada.
+2. creo el .sh para ejecutar el docker-compose desde terminal.
+3. Levanto todo al repo.
+    git add .
+    git commit -m "Descripción de los cambios realizados"
+    git push origin main
+4. Abro el Docker
+5. Clono el repo en el docker
+6. Asigno permisos al .sh
+7. Corro el .sh
+
