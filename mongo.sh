@@ -14,4 +14,4 @@ sudo docker cp  data.json monguito:/data.json
 sudo docker exec -it monguito bash
 
 #Cargo el json en una base
-mongoimport --db data_base_json --collection json_coleccion --file /data.json --jsonArray
+mongoimport --uri "mongodb://root:example@localhost:27017/db_json?authSource=admin" --collection json_coleccion --file /data.json --jsonArray

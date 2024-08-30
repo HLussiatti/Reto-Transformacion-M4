@@ -40,3 +40,6 @@ Las colecciones de datos que forman tu json, subirlas a la base de datos creada 
     docker exec -it monguito bash
 11. Importo la base
     mongoimport --db data_base_json --collection json_coleccion --file /data.json --jsonArray
+
+    12. ingreso
+    mongo --username root --password exarootmple --authenticationDatabase admin
