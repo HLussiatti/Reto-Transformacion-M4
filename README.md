@@ -22,10 +22,16 @@ Las colecciones de datos que forman tu json, subirlas a la base de datos creada 
 2. creo el .sh para ejecutar el docker-compose desde terminal.
 3. Levanto todo al repo.
     git add .
-    git commit -m "Descripción de los cambios realizados"
+    git commit -m "29/08/204 - HomeWork 4 junto a HomeWork 2"
     git push origin main
 4. Abro el Docker
 5. Clono el repo en el docker
-6. Asigno permisos al .sh
+    Si tengo cambios del repo primero (git reset --hard)
+    Luego git pull
+6. Ingreso a cd Reto-Transformacion-M4
+7. Asigno permisos al .sh
+    > chmod u+x mongo.sh
+    > ./mongo.sh 
 7. Corro el .sh
-
+HASTA ACÁ LLEGUÉ
+8. mongoimport --db data_base_json --collection coleccion --file data.json --jsonArray
