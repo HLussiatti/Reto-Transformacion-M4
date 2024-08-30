@@ -35,11 +35,21 @@ Las colecciones de datos que forman tu json, subirlas a la base de datos creada 
 7. Corro el .sh
 8. Debo salir de mongo
 9. Copio el json en el contenedor "monguito"
-    sudo docker cp  data.json monguito:/data.json
+    sudo docker cp  data.json monguito:/data/data.json
 10. Ejecuto mongo:
-    docker exec -it monguito bash
+    sudo docker exec -it monguito bash
 11. Importo la base
-    mongoimport --db data_base_json --collection json_coleccion --file /data.json --jsonArray
+    mongoimport --db db_json --collection json_coleccion --file /data/data.json --jsonArray -- Tenía error de permisos
+    mongoimport --uri "mongodb://root:example@localhost:27017/db_json?authSource=admin" --collection json_collection --file /data/data.json --jsonArray
 
-    12. ingreso
-    mongo --username root --password exarootmple --authenticationDatabase admin
+12. ingreso
+    mongo --username root --password example --authenticationDatabase admin
+
+13. Me posiciono en la base: 
+    use db_json
+14. Visualizo la base:
+    db.json_collection.find().pretty()
+
+
+# RESULTADO FINAL:
+![Texto Alternativo](Resultado.PNG)
